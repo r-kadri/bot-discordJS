@@ -13,6 +13,9 @@ module.exports = {
                 .setDescription("Je suis un robot crée pour vous aider dans votre recherche de joueurs !" )
                 .setThumbnail("https://media.tenor.com/Fe_JEWLd9lYAAAAC/gummy-bee-bss.gif")
             message.reply({embeds: [embed]});
+            
+        } else if(message.content.toLowerCase() === "salut") {
+            message.reply("Salut !");
         }
     }
 }

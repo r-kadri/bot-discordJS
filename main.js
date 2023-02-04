@@ -1,6 +1,5 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const fs = require('fs');
-const INFO = require('./info.json');
 
 // SECRET TOKEN (ignored file)
 const LOGIN_TOKEN = require('./token.json');
@@ -13,6 +12,8 @@ const CLIENT = new Client({
         GatewayIntentBits.MessageContent
     ]
 });
+
+module.exports.CLIENT = CLIENT;
 
 // EVENT HANDLER
 const eventFiles = fs.readdirSync('./src/events').filter(file => file.endsWith('.js'));
