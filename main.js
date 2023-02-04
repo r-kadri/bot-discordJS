@@ -8,6 +8,7 @@ const LOGIN_TOKEN = require('./token.json');
 const CLIENT = new Client({
     intents: [
         GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent
     ]
